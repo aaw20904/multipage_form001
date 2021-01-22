@@ -1,18 +1,165 @@
 <!DOCTYPE html>
-
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
-
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
-
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Trispace&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+        <title>JS-practice</title>
+        <style>
+          @import url(reset.css);
+          @import url(form.css);
+        </style>
+        <script type="text/javascript" src="form.js"></script>  
+    </head>
+    <body>
+        <div class="commonWrp">
+            <h1>Information for registration</h1>
+        <ul class="itemsWrapper">
+            
+            <li data-form-item ="name">
+                 
+              <div class="labelWrp">
+                <label for='name'>YOUR NAME&amp;SURNAME:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input list="name-list" type="text" id="name" autocomplete="off" placeholder="Name and Surname*"  aria-required="true">
+                  <datalist id="name-list">
+                  </datalist>
+                  <button data-btn="name" class="hoverable">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 1 of 7</div>
+                  <img src="progress71.svg">
+                </div>
+            </li>
+            
+            <li data-form-item ="country">
+               
+              <div class="labelWrp">
+                <label for='country'>YOUR COUNTRY:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input type="text" list="country-list" id="country" name="country" placeholder="Your Country*"  aria-required="true">
+                   <datalist id="country-list">
+                  </datalist>
+                  <button data-btn="country"  class="hoverable">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 2 of 7</div>
+                  <img src="progress72.svg">
+                </div>
+            </li>
+            <!--*age  style="display: none;"   -->
+              <li data-form-item ="age" >
+                
+              <div class="labelWrp">
+                <label for='age'>YOUR AGE:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input name="age" placeholder="Your age*" type="number" id="age" min="18" max="75" aria-required="true">
+                  <ul class="prompt">
+                   <li>One</li>
+                   <li>Two</li>
+                  </ul>
+                  <button class="hoverable" data-btn="age">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 3 of 7</div>
+                  <img src="progress73.svg">
+                </div>
+            </li>
+            <!--JobArea-->
+            <li data-form-item ="job_area"  >
+                
+              <div class="labelWrp">
+                <label for='dtSurame'>YOUR JOB AREA:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input type="text" list="job_area-list" id="job_area" name="job_area" placeholder="Your job area*"  aria-required="true">
+                   <datalist id="job_area-list">
+                  </datalist>
+                  <button data-btn="job_area" class="hoverable">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 4 of 7</div>
+                  <img src="progress74.svg">
+                </div>
+            </li>
+            <!--speciality-->
+            <li data-form-item ="specifity"  >
+                
+              <div class="labelWrp">
+                <label for='specifity'>YOUR SPECIFITY:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input type="text" list="specifity-list" id="specifity" name="specifity" placeholder="Your specifity*"  aria-required="true">
+                   <datalist id="specifity-list">
+                  </datalist>
+                  <button class="hoverable" data-btn="specifity">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 5 of 7</div>
+                  <img src="progress75.svg">
+                </div>
+            </li>
+             <!--experience-->
+            <li data-form-item ="experience"  >
+                
+              <div class="labelWrp">
+                <label for='experience'>YOUR EXRERIENCE:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input type="number" min="1" max="50" id="experience" name="experience" placeholder="Your experience*"  aria-required="true">
+                  <button class="hoverable" data-btn="experience">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 6 of 7</div>
+                  <img src="progress76.svg">
+                </div>
+            </li>
+            <!--eMail-->
+            <li data-form-item ="email"  >
+                
+              <div class="labelWrp">
+                <label for='email'>E-MAIL:</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <input type="text" id="email">
+                  <button class="hoverable" data-btn="email" name='email' placeholder="Your e-mail*"  aria-required="true">Next</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Step 7 of 7</div>
+                  <img src="progress77.svg">
+                </div>
+            </li>
+            <!--done-->
+            <li data-form-item ="done" >
+              <div class="labelWrp">
+                <label for='dtSurame'>Data has been collected</label>
+                <div class="err"> </div>
+              </div>
+              <div class="inpWrp">
+                  <button data-btn="done" class="hoverable">Search me best job!</button>
+              </div>
+              <div class="progressWrap">
+                  <div>Done!</div>
+                  <img src="info_complete.svg">
+                </div>
+            </li>
+            
+            
+        </ul>
+        </div>
+    </body>
 </html>
